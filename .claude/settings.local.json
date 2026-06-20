@@ -9,7 +9,15 @@
       "PowerShell(& \"C:\\\\Users\\\\Vikram\\\\Miniconda3\\\\Scripts\\\\conda.exe\" create -n llm-training python=3.13 -y 2>&1)",
       "PowerShell(& \"C:\\\\Users\\\\Vikram\\\\Miniconda3\\\\envs\\\\llm-training\\\\Scripts\\\\pip.exe\" install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128 2>&1)",
       "PowerShell(& \"C:\\\\Users\\\\Vikram\\\\Miniconda3\\\\envs\\\\llm-training\\\\Scripts\\\\pip.exe\" install transformers datasets tiktoken wandb tqdm 2>&1)",
-      "PowerShell(& \"C:\\\\Users\\\\Vikram\\\\Miniconda3\\\\envs\\\\llm-training\\\\python.exe\" -c \"import torch, numpy, transformers, datasets, tiktoken, wandb, tqdm; print\\('torch:', torch.__version__, '| CUDA:', torch.cuda.is_available\\(\\)\\); print\\('numpy:', numpy.__version__\\); print\\('transformers:', transformers.__version__\\); print\\('datasets:', datasets.__version__\\); print\\('tiktoken:', tiktoken.__version__\\); print\\('wandb:', wandb.__version__\\); print\\('tqdm:', tqdm.__version__\\)\")"
+      "PowerShell(& \"C:\\\\Users\\\\Vikram\\\\Miniconda3\\\\envs\\\\llm-training\\\\python.exe\" -c \"import torch, numpy, transformers, datasets, tiktoken, wandb, tqdm; print\\('torch:', torch.__version__, '| CUDA:', torch.cuda.is_available\\(\\)\\); print\\('numpy:', numpy.__version__\\); print\\('transformers:', transformers.__version__\\); print\\('datasets:', datasets.__version__\\); print\\('tiktoken:', tiktoken.__version__\\); print\\('wandb:', wandb.__version__\\); print\\('tqdm:', tqdm.__version__\\)\")",
+      "Read(//c/c/Users/Vikram/OneDrive - MT/Documents/Projects/llm-training/nanoGPT/**)",
+      "Read(//c/c/Users/Vikram/OneDrive - MT/Documents/Projects/llm-training/nanoGPT/config/**)",
+      "Bash(/c/Users/Vikram/Miniconda3/envs/llm-training/python.exe -c ' *)",
+      "Bash(\"/c/Users/Vikram/Miniconda3/envs/llm-training/python.exe\" prepare.py)",
+      "Bash(\"/c/Users/Vikram/Miniconda3/envs/llm-training/python.exe\" train.py config/train_gpt2_rtx3080.py --dataset=shakespeare --max_iters=60 --eval_interval=30 --eval_iters=20 --log_interval=10 --compile=False --out_dir=out-smoketest)",
+      "Bash(rm -rf out-smoketest)",
+      "Bash(ls -d out-smoketest)",
+      "Bash(\"/c/Users/Vikram/Miniconda3/envs/llm-training/python.exe\" train.py config/train_gpt2_rtx3080.py --dataset=shakespeare --max_iters=40 --eval_interval=20 --eval_iters=20 --log_interval=10 --compile=True --out_dir=out-compiletest)"
     ]
   }
 }
