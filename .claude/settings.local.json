@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem *)",
+      "PowerShell(& \"C:\\\\Users\\\\Vikram\\\\Miniconda3\\\\Scripts\\\\conda.exe\" search python=3.13 --quiet 2>&1 | Select-Object -Last 5)",
+      "PowerShell(& \"C:\\\\Users\\\\Vikram\\\\Miniconda3\\\\Scripts\\\\conda.exe\" tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main 2>&1)",
+      "PowerShell(& \"C:\\\\Users\\\\Vikram\\\\Miniconda3\\\\Scripts\\\\conda.exe\" tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r 2>&1)",
+      "PowerShell(& \"C:\\\\Users\\\\Vikram\\\\Miniconda3\\\\Scripts\\\\conda.exe\" tos accept --override-channels --channel https://repo.anaconda.com/pkgs/msys2 2>&1)",
+      "PowerShell(& \"C:\\\\Users\\\\Vikram\\\\Miniconda3\\\\Scripts\\\\conda.exe\" create -n llm-training python=3.13 -y 2>&1)",
+      "PowerShell(& \"C:\\\\Users\\\\Vikram\\\\Miniconda3\\\\envs\\\\llm-training\\\\Scripts\\\\pip.exe\" install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128 2>&1)",
+      "PowerShell(& \"C:\\\\Users\\\\Vikram\\\\Miniconda3\\\\envs\\\\llm-training\\\\Scripts\\\\pip.exe\" install transformers datasets tiktoken wandb tqdm 2>&1)",
+      "PowerShell(& \"C:\\\\Users\\\\Vikram\\\\Miniconda3\\\\envs\\\\llm-training\\\\python.exe\" -c \"import torch, numpy, transformers, datasets, tiktoken, wandb, tqdm; print\\('torch:', torch.__version__, '| CUDA:', torch.cuda.is_available\\(\\)\\); print\\('numpy:', numpy.__version__\\); print\\('transformers:', transformers.__version__\\); print\\('datasets:', datasets.__version__\\); print\\('tiktoken:', tiktoken.__version__\\); print\\('wandb:', wandb.__version__\\); print\\('tqdm:', tqdm.__version__\\)\")"
+    ]
+  }
+}
